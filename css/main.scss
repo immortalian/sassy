@@ -3,6 +3,11 @@ $colors: (
     primary: #005DFF,
     accent: #FFF6BB
 );
+
+$padding: 15px;
+$borders: 15px;
+
+// function
 @function rangi($color-name){
     @return map-get($colors, $color-name )
 }
@@ -27,4 +32,22 @@ body {
         position: absolute;
         z-index: -1;
          }
+      header a {
+          color: #fff;
+          text-decoration: none;
+          padding: $padding;
+          display: block;
+          text-decoration: uppercase;
+      }   
+    }
+
+    main {
+
+        section#card {
+            background: #fff;
+            padding: 20px;
+            margin: 1em auto;
+            border-radius: $borders; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .2)
+        }
     }
