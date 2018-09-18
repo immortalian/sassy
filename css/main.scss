@@ -13,6 +13,15 @@ $borders: 15px;
 @function rangi($color-name){
     @return map-get($colors, $color-name )
 }
+// desktop media querry
+$desktop: 840px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
 // body {
 //     background-color: $mycolor;
 // }
@@ -33,6 +42,11 @@ body {
         height: 100%;
         position: absolute;
         z-index: -1;
+
+        @include desktop {
+            clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+        }
+
          }
       header a {
           color: #fff;
